@@ -24,10 +24,11 @@ pipeline {
         stage('Git Push'){
         steps{
         script{
-            GIT_CREDS = credentials(manish-git-cred)
+            GIT_CREDS = credentials('manish-git-cred')
             sh '''
+                rm -rf flask-frontend-k8s-menifest
                 git clone https://github.com/Manish7992/flask-frontend-k8s-menifest.git
-                cd guestbook-v1-code
+                cd flask-frontend-k8s-menifest
                 git pull https://${GIT_CREDS_USR}:${GIT_CREDS_PSW}@github.com/Manish7992/flask-frontend-k8s-menifest.git
                 sed ' s%manish8757/rancher:${GIT_PREVIOUS_SUCCESSFUL_COMMIT}%manish8757/rancher:${GIT_COMMIT} %' deployment.yaml
                 git add .
