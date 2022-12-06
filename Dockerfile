@@ -17,7 +17,6 @@ ENV FLASK_ENV=development
 
 #Open the port
 EXPOSE 5100
-
 #Copy the current directory . in the project to the workdir . in the image.
 COPY . .
 #Makes the app library available in the python console
