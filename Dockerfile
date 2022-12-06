@@ -22,5 +22,4 @@ EXPOSE 5100
 COPY . .
 #Makes the app library available in the python console
 RUN pip install -e .
-
 CMD flask run -p 5100
