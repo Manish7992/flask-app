@@ -28,7 +28,7 @@ pipeline {
             sh '''
                 echo ${GIT_PREVIOUS_SUCCESSFUL_COMMIT}
                 rm -rf flask-frontend-k8s-menifest
-                git clone https://github.com/Manish7992/flask-frontend-k8s-menifest.git
+                git clone git@github.com:Manish7992/flask-frontend-k8s-menifest.git
                 cd flask-frontend-k8s-menifest
                 cat deployment.yaml
                 git pull 
