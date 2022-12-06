@@ -14,7 +14,6 @@ RUN pip install -r requirements.txt
 ENV FLASK_APP=app.run
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development
-
 #Open the port
 EXPOSE 5100
 #Copy the current directory . in the project to the workdir . in the image.
